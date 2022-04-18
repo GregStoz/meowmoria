@@ -63,7 +63,8 @@ const App = () => {
   //VERIFICANDO FIM DE JOGO
   useEffect(() => {
     if(moveCount > 0 && gridItems.every(item => item.permanentShown === true)) {
-      alert('Parabéns, você finalizou o jogo') && setPlaying(false);
+      alert('Parabéns, você finalizou o jogo');
+      setPlaying(false);
     }
   }, [moveCount, gridItems]);
 
