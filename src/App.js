@@ -7,6 +7,7 @@ import { items } from './data/items';
 import { GridItem } from './components/GridItem';
 import { formatTimeElapsed } from './helpers/formatTimeElapsed';
 
+
 const App = () => {
   const [playing, setPlaying] = useState(false);
   const [timeElapsed, setTimeElapsed] = useState(0);
@@ -63,18 +64,16 @@ const App = () => {
   //VERIFICANDO FIM DE JOGO
   useEffect(() => {
     if(moveCount > 0 && gridItems.every(item => item.permanentShown === true)) {
-      setPlaying(false);
             
-    }
+      setPlaying(false); 
+                
+    } 
+    
   }, [moveCount, gridItems]);
-
-  useEffect(() => {
-    if(moveCount = 2 && gridItems.every(item => item.permanentShown === true)) {
-      alert('Parabéns você finalizou o jogo');
-            
-    }
-  }, [moveCount, gridItems]);
-
+   
+  
+  
+  
   const resetAndCreateGrid = () => {
     //PASSO 1 - RESETAR
     setTimeElapsed(0);

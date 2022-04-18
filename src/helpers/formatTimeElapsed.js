@@ -8,3 +8,9 @@ export const formatTimeElapsed = (seconds) => {
     return `${minString}:${secString}`;
 
 }
+
+export const finalGame = () => {
+let finalGame = MessageEvent;
+    return `${finalGame}`;
+
+}
