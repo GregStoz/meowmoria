@@ -64,8 +64,14 @@ const App = () => {
   useEffect(() => {
     if(moveCount > 0 && gridItems.every(item => item.permanentShown === true)) {
       setPlaying(false);
-      alert('Parabéns, você finalizou o jogo');
-      
+            
+    }
+  }, [moveCount, gridItems]);
+
+  useEffect(() => {
+    if(moveCount = 2 && gridItems.every(item => item.permanentShown === true)) {
+      alert('Parabéns você finalizou o jogo');
+            
     }
   }, [moveCount, gridItems]);
 
